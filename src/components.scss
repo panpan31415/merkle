@@ -1,0 +1,25 @@
+@mixin merkle-button($color){
+    position: relative;  
+    &,&:focus,&:active{
+      border:none;
+      outline: none;
+    }
+    &::before{
+      content:"";
+      position: absolute;
+      top:0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba($color,.3);
+      transform: scaleX(0);
+      transition: transform 250ms ease-in;
+      transform-origin: right;
+    }
+    &:focus{
+      &::before{
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+    }
+}

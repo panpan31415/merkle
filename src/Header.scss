@@ -1,0 +1,73 @@
+@import "./base.scss";
+@import "./components.scss";
+.header {
+  min-height: 8rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 2rem;
+}
+
+.helper-tools {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  font-family: var(--secondary-font);
+  &__btn {
+    border: none;
+    height: 40px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &--subscribe-btn {
+    @extend .helper-tools__btn;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: var(--color-black);
+    font-size: 1.5rem;
+    color: var(--color-white);
+    font-weight: 800;
+    @include merkle-button(#fff);
+  }
+  &--language-btn {
+    @extend .helper-tools__btn;
+    font-family: var(--secondary-font);
+    font-weight: 800;
+    font-size: 1.5rem;
+    background-color: var(--color-white);
+    transition: color 0.5s ease-in;
+    padding: 5px;
+    margin-right: 10px;
+    &:hover {
+      color: var(--color-red-one);
+    }
+  }
+  &--search-btn {
+    @extend .helper-tools__btn;
+    background-color: #fff;
+    color: var(--color-black);
+    aspect-ratio: 1;
+    font-size: 2rem;
+  }
+}
+
+@include media($width: $bp-small) {
+  .helper-tools__btn {
+    height: 30px;
+  }
+}
+
+@include media($width: 480px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
