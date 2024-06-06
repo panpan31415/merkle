@@ -3,8 +3,7 @@
 .header {
   min-height: 8rem;
   display: flex;
-  flex-wrap: wrap;
-  padding: 2rem;
+  padding: 0rem 10rem;
   justify-content: space-between;
   align-items: center;
 }
@@ -59,15 +58,26 @@
   }
 }
 
-@include media($width: $bp-small) {
+@include media($width: $bp-medium) {
+  .header {
+    padding: 0 5rem;
+  }
   .helper-tools__btn {
     height: 30px;
   }
 }
 
-@include media($width: 480px) {
+@include media($width: $bp-small) {
   .header {
+    padding: 0 2rem;
+  }
+}
+
+@include media($width: 450px) {
+  .header {
+    flex-wrap: wrap;
     flex-direction: column;
-    gap: 10px;
+    gap: 1rem;
+    padding: 1rem;
   }
 }
