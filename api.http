@@ -1,0 +1,11 @@
+# You need to install REST Client for Visual Studio Code Extenstion to use this file
+
+### Top stories
+GET https://hacker-news.firebaseio.com/v0/topstories.json HTTP/1.0
+
+### Story Item
+GET https://hacker-news.firebaseio.com/v0/item/40595920.json HTTP/1.0
+
+
+### User Info
+GET https://hacker-news.firebaseio.com/v0/user/dshipper.json
