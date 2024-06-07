@@ -45,7 +45,9 @@ function NewsItem({ story, imageName }: NewsItemProps) {
         </div>
         <div className="attribute-box">
           <span className="attribute-box__type">time</span>
-          <span className="attribute-box__value">{story.time}</span>
+          <span className="attribute-box__value">
+            {new Date(story.time).toLocaleString()}
+          </span>
         </div>
       </div>
       <p className="news-item__description">
