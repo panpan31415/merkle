@@ -24,7 +24,9 @@ type NewsItemProps = {
 function NewsItem({ story, imageName }: NewsItemProps) {
   return (
     <div className="news-item" id={"news-item" + imageName}>
-      <Picture imageName={imageName} alt={story.title} />
+      <div style={{ overflow: "hidden" }}>
+        <Picture imageName={imageName} alt={story.title} />
+      </div>
       <div className="news-item__title">
         <a href={story.url}>
           <h2>{story.title}</h2>

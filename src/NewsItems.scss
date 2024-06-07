@@ -16,6 +16,8 @@
     width: 100%;
     aspect-ratio: 3 / 4;
     object-fit: cover;
+    overflow: hidden;
+    transition: transform 0.25s ease-in;
   }
   &__title {
     font-family: var(--primary-font);
@@ -53,6 +55,9 @@
   &:hover {
     & a h2 {
       background-size: 100% 2px;
+    }
+    .news-item__image {
+      transform: scale(1.4);
     }
   }
 }
