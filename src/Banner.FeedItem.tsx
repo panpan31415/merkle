@@ -25,6 +25,9 @@ export default function FeedItem() {
                     <span className="attribute-box__type">author</span> <span className="attribute-box__value">187</span>
                 </div>
             </div>
+            <p className="feed-item__description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. In pariatur reprehenderit minus expedita, explicabo rem nemo magnam culpa sit consectetur voluptas earum porro, odio consequatur quos nesciunt quaerat saepe sed.
+            </p>
         </li>
     );
 }

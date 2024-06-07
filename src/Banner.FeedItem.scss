@@ -50,6 +50,12 @@
     flex-wrap: wrap;
     gap: 5px;
   }
+  &__description {
+    margin-top: 5px;
+    font-family: var(--secondary-font);
+    font-size: 15px;
+    line-height: 30px;
+  }
 }
 
 .attribute-box {
