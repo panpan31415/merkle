@@ -2,8 +2,8 @@
   position: relative;
   cursor: pointer;
   &,
-  &:focus,
-  &:active {
+  &:hover,
+  &:focus {
     border: none;
     outline: none;
   }
@@ -19,6 +19,7 @@
     transition: transform 250ms ease-in;
     transform-origin: right;
   }
+  &:hover,
   &:focus {
     &::before {
       transform: scaleX(1);
