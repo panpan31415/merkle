@@ -1,25 +1,44 @@
-@mixin merkle-button($color){
-    position: relative;  
-    &,&:focus,&:active{
-      border:none;
-      outline: none;
+@mixin merkle-button($color) {
+  position: relative;
+  cursor: pointer;
+  &,
+  &:focus,
+  &:active {
+    border: none;
+    outline: none;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color, 0.3);
+    transform: scaleX(0);
+    transition: transform 250ms ease-in;
+    transform-origin: right;
+  }
+  &:focus {
+    &::before {
+      transform: scaleX(1);
+      transform-origin: left;
     }
-    &::before{
-      content:"";
-      position: absolute;
-      top:0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba($color,.3);
-      transform: scaleX(0);
-      transition: transform 250ms ease-in;
-      transform-origin: right;
-    }
-    &:focus{
-      &::before{
-        transform: scaleX(1);
-        transform-origin: left;
-      }
-    }
+  }
+}
+
+@mixin hover_underline() {
+  display: inline;
+  background-image: linear-gradient(
+    to right,
+    currentColor 0%,
+    currentColor 100%
+  );
+  background-size: 0 2px;
+  background-position: 0px 95%;
+  background-repeat: no-repeat;
+  transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+  &:hover {
+    background-size: 100% 2px;
+  }
 }
