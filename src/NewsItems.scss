@@ -42,6 +42,8 @@
   }
   &__attributes {
     margin-top: 5px;
+    gap: 5px;
+    display: flex;
   }
   &__description {
     font-family: var(--secondary-font);
