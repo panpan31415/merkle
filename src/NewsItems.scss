@@ -1,0 +1,57 @@
+@import "./base.scss";
+@import "./components.scss";
+.news-items {
+  margin-top: 80px;
+  padding: 100px;
+  padding-top: 0;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+  }
+}
+
+.news-item {
+  &__image {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+  }
+  &__title {
+    font-family: var(--primary-font);
+    font-size: 20px;
+    color: var(--black-color);
+    & a,
+    & a:visited {
+      color: var(--black-color);
+      text-decoration: none;
+    }
+    & a h2 {
+      display: inline;
+      background-image: linear-gradient(
+        to right,
+        currentColor 0%,
+        currentColor 100%
+      );
+      background-size: 0 2px;
+      background-position: 0px 95%;
+      background-repeat: no-repeat;
+      transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86)
+        0s;
+    }
+  }
+  &__attributes {
+    margin-top: 5px;
+  }
+  &__description {
+    font-family: var(--secondary-font);
+    font-size: 15px;
+    line-height: 20px;
+  }
+  &:hover {
+    & a h2 {
+      background-size: 100% 2px;
+    }
+  }
+}
+@include attribute-box;
