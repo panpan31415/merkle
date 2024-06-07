@@ -1,5 +1,4 @@
 @import "./base.scss";
-@import "./components.scss";
 .news-items {
   margin-top: 80px;
   padding: 100px;
@@ -46,8 +45,10 @@
     margin-top: 5px;
     gap: 5px;
     display: flex;
+    flex-wrap: wrap;
   }
   &__description {
+    margin-top: 10px;
     font-family: var(--secondary-font);
     font-size: 15px;
     line-height: 20px;
@@ -61,7 +62,6 @@
     }
   }
 }
-@include attribute-box;
 
 @include media($width: $bp-medium) {
   .news-items {
