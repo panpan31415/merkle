@@ -12,7 +12,7 @@ export default function Banner() {
                     <NewsFeeds />
                 </div>
             </div>
-            <div className="banner__divider">1</div>
+            <div className="banner__divider" />
         </section>
     );
 }

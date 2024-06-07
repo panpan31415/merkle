@@ -39,7 +39,16 @@
   &__divider {
     height: 40px;
     width: 100%;
-    border: 1px solid red;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 40%;
+      background-color: var(--color-red-primary);
+    }
   }
   &__social {
     position: absolute;
@@ -59,6 +68,9 @@
     }
     &__right {
       padding: 60px 100px;
+    }
+    &__divider::after {
+      width: 100%;
     }
   }
   @include media($width: $bp-medium) {
