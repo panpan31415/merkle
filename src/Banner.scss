@@ -48,7 +48,7 @@
   }
 }
 
-.text-container {
+.slogan-container {
   z-index: 1;
   width: 70%;
   flex-direction: column;
@@ -61,14 +61,14 @@
   &__title-container {
     margin-top: 20px;
   }
-  &__slogan-title {
+  &__title {
     font-size: 35px;
     color: var(--color-white);
     font-weight: 600;
     font-family: var(--primary-font);
     @include hover_underline;
   }
-  &__slogan-description {
+  &__description {
     margin-top: 20px;
     font-size: 20px;
     color: var(--color-white);
