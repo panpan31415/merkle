@@ -55,3 +55,27 @@
   }
 }
 @include attribute-box;
+
+@include media($width: $bp-medium) {
+  .news-items {
+    padding: 50px;
+    &__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@include media($width: $bp-small) {
+  .news-items {
+    padding: 20px;
+    &__container {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@include media($width: 450px) {
+  .news-items {
+    padding: 10px;
+  }
+}
