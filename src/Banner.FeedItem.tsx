@@ -11,7 +11,7 @@ export default function FeedItem() {
             <div className="feed-item__title">
                 <a href="#123"><h2>Don Estridge: A misfit who built the IBM PC</h2></a>
             </div>
-            <div className="feed-item__description">
+            <div className="feed-item__attributes">
                 <div className="attribute-box">
                     <span className="attribute-box__type">time</span> <span className="attribute-box__value">2034-12-09 12:54</span>
                 </div>
