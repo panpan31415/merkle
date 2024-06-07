@@ -1,0 +1,9 @@
+@import "./base.scss";
+@import "./components.scss";
+
+.news-feeds {
+  height: 600px;
+  border-top: 6px solid var(--color-black);
+  padding: 40px 0;
+  overflow-y: auto;
+}

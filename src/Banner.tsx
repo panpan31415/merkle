@@ -1,3 +1,4 @@
+import NewsFeeds from "./Banner.NewsFeeds";
 import SloganContainer from "./Banner.SloganContainer";
 import "./Banner.scss";
 export default function Banner() {
@@ -8,7 +9,7 @@ export default function Banner() {
                     <SloganContainer />
                 </div>
                 <div className="banner__right">
-
+                    <NewsFeeds />
                 </div>
             </div>
             <div className="banner__divider">1</div>
