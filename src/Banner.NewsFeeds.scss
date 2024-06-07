@@ -7,3 +7,10 @@
   padding: 40px 0;
   overflow-y: auto;
 }
+
+@include media($width: $bp-large) {
+  .news-feeds {
+    height: 400px;
+    padding: 0;
+  }
+}

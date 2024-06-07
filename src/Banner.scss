@@ -45,3 +45,50 @@
     position: absolute;
   }
 }
+
+@include media($width: $bp-large) {
+  .banner {
+    &__container {
+      flex-direction: column;
+    }
+    &__left {
+      min-height: 500px;
+      &:before {
+        width: 100%;
+      }
+    }
+    &__right {
+      padding: 60px 100px;
+    }
+  }
+  @include media($width: $bp-medium) {
+    .banner {
+      &__left {
+        padding-left: 50px;
+      }
+      &__right {
+        padding: 50px;
+      }
+    }
+  }
+  @include media($width: $bp-small) {
+    .banner {
+      &__left {
+        padding-left: 20px;
+      }
+      &__right {
+        padding: 50px 20px;
+      }
+    }
+  }
+  @include media($width: 450px) {
+    .banner {
+      &__left {
+        padding-left: 10px;
+      }
+      &__right {
+        padding: 50px 10px;
+      }
+    }
+  }
+}
