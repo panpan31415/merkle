@@ -4,11 +4,11 @@
 
 After cloning the repo, you should install dependencies
 
-# `npm install`
+`npm install`
 
 In the project directory, then you can run:
 
-# `npm start`
+`npm start`
 
 to start the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
